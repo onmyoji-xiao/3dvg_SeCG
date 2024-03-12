@@ -1,0 +1,10 @@
+# ninja log v5
+3	12478	1690978599821076526	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/group_points_gpu.o	8b1831f6529833c5
+1	12513	1690978599857077479	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/ball_query_gpu.o	2c337a4f6d64600e
+5	12547	1690978599897078538	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/sampling_gpu.o	e741532b6b19a4ca
+3	13221	1690978600577096510	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/interpolate.o	3e3b47439dccd587
+4	13240	1690978600573096404	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/interpolate_gpu.o	1513393bc1f35204
+4	13309	1690978600665098835	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/sampling.o	7300c1496bd7c30d
+2	13436	1690978600793102218	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/group_points.o	1ba8c2b08a0e9f82
+0	13443	1690978600801102429	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/ball_query.o	e26cebe03425c7d9
+1	16409	1690978603765180515	/DATA20T/bip/xhb/xf/refer-3DVG-xf/external_tools/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/bindings.o	df3683ceda27f114
