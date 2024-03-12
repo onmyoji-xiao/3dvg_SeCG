@@ -162,8 +162,7 @@ if __name__ == '__main__':
         optimizer.load_state_dict(checkpoint['optimizer'])
         lr_scheduler.load_state_dict(checkpoint['scheduler'])
         start_epoch = loaded_epoch + 1
-        best_test_acc = checkpoint['best_acc']
-        print('Resuming from epoch %d, best acc %f' % (start_epoch, best_test_acc))
+        print('Resuming from epoch %d' % (start_epoch))
         del checkpoint
 
     if args.pn_path != '':
@@ -205,7 +204,6 @@ if __name__ == '__main__':
             'model': model.state_dict(),
             'optimizer': optimizer.state_dict(),
             'scheduler': lr_scheduler.state_dict(),
-            'best_acc': max(best_test_acc, eval_acc),
         }, args.save_dir + '/ckpt_last.pth')
 
         if eval_acc >= best_test_acc:
@@ -213,7 +211,6 @@ if __name__ == '__main__':
             torch.save({
                 'epoch': epoch,
                 'model': model.state_dict(),
-                'best_acc': best_test_acc
             }, args.save_dir + '/ckpt_best.pth')
 
         if epoch % 10 == 0:
