@@ -1,6 +1,7 @@
 # SeCG：Semantic-Enhanced 3D Visual Grounding via Cross-modal Graph Attention
 The source code of paper.
 
+
 ## Environment
 ### Requirements
 - CUDA: >=11.3  
@@ -30,11 +31,18 @@ Download Bert files from [Hugging Face](https://huggingface.co/google-bert/bert-
 Download the first encoder checkpoint " ckpt_cls40.pth" from our [drive](https://drive.google.com/drive/folders/1innoC3gyiHxKFK8bWyhofnzgTW_U1_lW?usp=sharing)
 
 ## Evaluation
-Download SeCG model "ckpt_nr3d.pth" from our [drive](https://drive.google.com/drive/folders/1mrdHeOPHUmDIJrQJrr3pVjQgdMBoOlBI?usp=sharing), put it into "./checkpoints"
+Download SeCG model "ckpt_nr3d.pth" and "ckpt_sr3d.pth" from our [drive](https://drive.google.com/drive/folders/1mrdHeOPHUmDIJrQJrr3pVjQgdMBoOlBI?usp=sharing), put it into "./checkpoints"
 ```
+//nr3d
 python evaluation.py 
 	--scannet-file ./scannet/scannet_00_views.pkl 
 	--refer_test_file ./data/referit3d/nr3d_test.csv 
 	--weight ./checkpoints/ckpt_nr3d.pth
+	--bert-pretrain-path /pretrained/bert
+//sr3d
+python evaluation.py 
+	--scannet-file ./scannet/scannet_00_views.pkl;./scannet/scannet_0x_views.pkl
+	--refer_test_file ./data/referit3d/sr3d_test.csv 
+	--weight ./checkpoints/ckpt_sr3d.pth
 	--bert-pretrain-path /pretrained/bert
 ```
