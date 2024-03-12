@@ -1,6 +1,5 @@
 # SeCG：Semantic-Enhanced 3D Visual Grounding via Cross-modal Graph Attention
-The source code of paper.
-
+![image](Pipeline.png)
 
 ## Environment
 ### Requirements
@@ -20,10 +19,10 @@ python setup.py install
 ## Data Preparation
 ### ScanNet v2
 Download the [ScanNet V2](http://www.scan-net.org/) dataset.  
-Prepare for ScanNet data and package it into "scannet_00_views.pkl"
+Prepare for ScanNet data and package it into "scannet_00_views.pkl" or "scannet_0x_views.pkl"
 ```
 cd data
-python prepare_scannet_data.py
+python prepare_scannet_data.py --process-only-zero-view [1/0]
 ```
 
 ### Pretrained Model
