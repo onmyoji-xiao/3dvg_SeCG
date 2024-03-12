@@ -68,5 +68,6 @@ python train.py
 ```
 
 ## Acknowledgment
-Our codes references the following codebases. We gratefully thank the authors for their wonderful works.
+Our codes references the following codebases. We gratefully thank the authors for their wonderful works.  
+
 [referit3d](https://github.com/referit3d/referit3d), [ScanRefer](https://daveredrum.github.io/ScanRefer/), [MVT-3DVG](https://github.com/sega-hsj/MVT-3DVG), [VQA_ReGAT](https://github.com/linjieli222/VQA_ReGAT)
