@@ -45,3 +45,28 @@ python evaluation.py
 	--weight ./checkpoints/ckpt_sr3d.pth
 	--bert-pretrain-path /pretrained/bert
 ```
+## Training
+```
+//nr3d
+python train.py 
+	--scannet-file ./scannet/scannet_00_views.pkl 
+	--refer_train_file ./data/referit3d/nr3d_train.csv
+	--refer_val_file ./data/referit3d/nr3d_test.csv
+        --pn-path ./pretrained/ckpt_cls40.pth
+	--n-workers 8
+        --batch-size 36
+	--bert-pretrain-path /pretrained/bert
+//sr3d
+python train.py  
+	--scannet-file ./scannet/scannet_00_views.pkl;./scannet/scannet_0x_views.pkl
+	--refer_train_file ./data/referit3d/sr3d_train.csv
+	--refer_val_file ./data/referit3d/sr3d_test.csv
+        --pn-path ./pretrained/ckpt_cls40.pth
+	--n-workers 8
+        --batch-size 36
+	--bert-pretrain-path /pretrained/bert
+```
+
+## Acknowledgment
+Our codes references the following codebases. We gratefully thank the authors for their wonderful works.
+[referit3d](https://github.com/referit3d/referit3d), [ScanRefer](https://daveredrum.github.io/ScanRefer/), [MVT-3DVG](https://github.com/sega-hsj/MVT-3DVG), [VQA_ReGAT](https://github.com/linjieli222/VQA_ReGAT)
