@@ -26,11 +26,11 @@ python prepare_scannet_data.py
 ```
 
 ### Pretrained Model
-Download Bert files from [Hugging Face](https://huggingface.co/google-bert/bert-base-uncased/tree/main) or from our [drive](https://drive.google.com/drive/folders/1RwH7mdQXrAYKiM4_2_95Vle050yYCT-5?usp=sharing)  
+Download Bert files from [Hugging Face](https://huggingface.co/google-bert/bert-base-uncased/tree/main) or from our [drive](https://drive.google.com/drive/folders/1594AHExOT28CI4QeBKrYnBL-NCk6ak3W?usp=drive_link)  
 Download the first encoder checkpoint " ckpt_cls40.pth" from our [drive](https://drive.google.com/drive/folders/1innoC3gyiHxKFK8bWyhofnzgTW_U1_lW?usp=sharing)
 
 ## Evaluation
-Download SeCG model "ckpt_nr3d" from our [drive](https://drive.google.com/drive/folders/1mrdHeOPHUmDIJrQJrr3pVjQgdMBoOlBI?usp=sharing), put it into "./checkpoints"
+Download SeCG model "ckpt_nr3d.pth" from our [drive](https://drive.google.com/drive/folders/1mrdHeOPHUmDIJrQJrr3pVjQgdMBoOlBI?usp=sharing), put it into "./checkpoints"
 ```
 python evaluation.py 
 	--scannet-file ./scannet/scannet_00_views.pkl 
