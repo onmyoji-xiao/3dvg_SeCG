@@ -19,7 +19,7 @@ python setup.py install
 ## Data Preparation
 ### ScanNet v2
 Download the [ScanNet V2](http://www.scan-net.org/) dataset.  
-Prepare for ScanNet data and package it into "scannet.pkl"
+Prepare for ScanNet data and package it into "scannet_00_views.pkl"
 ```
 cd data
 python prepare_scannet_data.py
@@ -30,4 +30,11 @@ Download Bert files from [Hugging Face](https://huggingface.co/google-bert/bert-
 Download the first encoder checkpoint " ckpt_cls40.pth" from our [drive](https://drive.google.com/drive/folders/1innoC3gyiHxKFK8bWyhofnzgTW_U1_lW?usp=sharing)
 
 ## Evaluation
-
+Download SeCG model "ckpt_nr3d" from our [drive](), put it into "./checkpoints"
+```
+python evaluation.py 
+	--scannet-file ./scannet/scannet_00_views.pkl 
+	--refer_test_file ./data/referit3d/nr3d_test.csv 
+	--weight ./checkpoints/ckpt_nr3d.pth
+	--bert-pretrain-path /pretrained/bert
+```
