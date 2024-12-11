@@ -46,21 +46,18 @@ class Nr3dDataset(Dataset):
 
         return scan, target, tokens, scan_id, related_class
 
-    def prepare_distractors(self, scan, target, related_class):
+    def prepare_distractors(self, scan, target):
         target_label = target.semantic_label(scan)
+
         # First add all objects with the same instance-label as the target
         distractors = [o for o in scan.three_d_objects if
                        (o.semantic_label(scan) == target_label and (o != target))]
+
         # Then all more objects up to max-number of distractors
-        already_included = [target_label]
-
-        relaters = [o for o in scan.three_d_objects if
-                    (o.semantic_label(scan) not in already_included and o.semantic_label(scan) in related_class)]
-        already_included = already_included + list(related_class)
-        np.random.shuffle(relaters)
+        already_included = {target_label}
         clutter = [o for o in scan.three_d_objects if o.semantic_label(scan) not in already_included]
+        np.random.shuffle(clutter)
 
-        distractors.extend(relaters)
         distractors.extend(clutter)
         distractors = distractors[:self.max_distractors]
         np.random.shuffle(distractors)
@@ -72,7 +69,7 @@ class Nr3dDataset(Dataset):
         scan, target, tokens, scan_id, related_class = self.get_reference_data(index)
         res['mention_class'] = len(related_class)
         # Make a context of distractors
-        context = self.prepare_distractors(scan, target, related_class)
+        context = self.prepare_distractors(scan, target)
         # Add target object in 'context' list
         target_pos = np.random.randint(len(context) + 1)
         context.insert(target_pos, target)
