@@ -1,5 +1,14 @@
+
+<div align="center">
+
 # SeCG：Semantic-Enhanced 3D Visual Grounding via Cross-modal Graph Attention
+**Feng Xiao** · **Hongbin Xu** · **Qiuxia Wu** · **Wenxiong Kang**  
+*South China University of Technology*  
+
+[Code](https://github.com/onmyoji-xiao/3dvg_SeCG) | [Paper](https://arxiv.org/abs/2403.08182) | [Project Page](#)  
+
 ![image](Pipeline.png)
+</div>
 
 ## Environment
 ### Requirements
